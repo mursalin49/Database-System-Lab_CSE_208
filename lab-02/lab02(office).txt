@@ -1,0 +1,5 @@
+CREATE DATABASE office;
+CREATE TABLE Employee (id INT(10), name varchar(20), phoneNo INT(15), salary INT(10), address varchar(20), age INT(5));
+INSERT INTO Employee VALUES(1634,'niloy',01319213435,56000,'Dhaka',33);
+SELECT * FROM Employee WHERE salary >45000; // show Statement
+DELETE FROM Employee WHERE salary >50000; // DELETE Statement

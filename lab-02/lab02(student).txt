@@ -1,0 +1,8 @@
+CREATE DATABASE bubt49;
+CREATE TABLE Student(s_id INT(10) , s_name varchar(15), dept_name varchar(10));
+DESC student;
+INSERT INTO student VALUES(111,'nirob','cse'); // insert table data
+DELETE FROM student WHERE s_id=115; // delete table data 
+DELETE FROM student WHERE s_name= 'nirob';  // delete table data 
+DELETE FROM student; // table delete
+DROP DATABASE bubt49; // delete database

@@ -1,0 +1,56 @@
+                                             (1)
+
+CREATE DATABASE MURSALIN423;
+CREATE TABLE customer(customer_id INT ,cust_name varchar(20),city varchar(20), grade INT, salesman_id INT);
+INSERT INTO customer VALUES(3002,"Nick Rimando","New York", 100,5001);
+INSERT INTO customer VALUES(3007,"Brad Davis","New York", 200,5001);
+INSERT INTO customer VALUES(3005,"Graham","California", 200,5002);
+INSERT INTO customer VALUES(3008,"Julian Green","London", 300,5002);
+INSERT INTO customer VALUES(3004,"Fabian Jhonson ","Paris", 300,5006);
+INSERT INTO customer VALUES(3009,"Geoffc Cameron ","Berlin", 100,5003);
+INSERT INTO customer VALUES(3003,"Jozy Altidor ","Moscow", 200,5007);
+SELECT*FROM customer WHERE grade>100;
+                                             (2)
+
+SELECT*FROM customer WHERE city="New York";
+
+                                             (3)
+
+SELECT*FROM customer WHERE city="New York" AND grade>100;
+
+                                            (4)
+
+SELECT*FROM customer WHERE city="New York" OR grade>100;
+
+                                            (5)
+
+SELECT*FROM customer WHERE NOT grade>100 AND city = 'New York';
+
+                                            (6)
+
+SELECT*FROM customer WHERE 
+NOT city = 'New York'
+AND grade>100;
+
+                                           (7)
+
+SELECT*FROM customer WHERE 
+ city = 'London'
+AND grade>300;
+UPDATE customer
+SET grade="250"
+WHERE
+city='London'
+AND grade=300;
+
+                                              (A)
+
+SELECT * FROM customer WHERE salesman_id=5001;
+                                              (B) 
+
+SELECT cust_name, city FROM customer WHERE city="Paris";
+
+                                                   (C)
+
+SELECT  cust_name, city,salesman_id  FROM customer WHERE   city="Paris"
+OR city="Berlin";

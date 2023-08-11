@@ -1,0 +1,35 @@
+CREATE DATABASE Lab06;
+CREATE TABLE dept (
+  deptID INT PRIMARY KEY,
+  deptName VARCHAR(50),
+  establishmentYear INT
+);
+
+CREATE TABLE student (
+  studentID INT PRIMARY KEY,
+  Name VARCHAR(50),
+  cgpa DECIMAL(3, 2),
+  hometown VARCHAR(50),
+  mobile VARCHAR(15),
+  dept INT,
+  FOREIGN KEY (dept) REFERENCES dept(deptID)
+);
+
+CREATE TABLE employee (
+  employeeID INT PRIMARY KEY,
+  eName VARCHAR(50),
+  salary DECIMAL(10, 2),
+  hometown VARCHAR(50),
+  dept INT,
+  FOREIGN KEY (dept) REFERENCES dept(deptID)
+);
+
+INSERT INTO dept (deptID, deptName, establishmentYear) VALUES
+(1, 'Computer Science', 2005),
+(2, 'Electrical Engineering', 2008),
+(3, 'Mechanical Engineering', 2010);
+
+INSERT INTO dept (deptID, deptName, establishmentYear) VALUES
+(5, 'Computer Science', 2005),
+(7, 'Electrical Engineering', 2008),
+(9, 'Mechanical Engineering', 2010);
